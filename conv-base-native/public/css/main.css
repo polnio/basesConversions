@@ -1,0 +1,98 @@
+*, ::before, ::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: #000;
+}
+
+#app {
+  display: -ms-grid;
+  display: grid;
+  position: absolute;
+  width: 320px;
+  height: 270px;
+  padding: 10px;
+  border-radius: 10px;
+  background: #fff;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-grid-rows: 25px 25px 50px 1fr 50px 1fr;
+      grid-template-rows: 25px 25px 50px 1fr 50px 1fr;
+      grid-template-areas: "input input  input" "bases bases  bases" "clear numpad numpad" ".     numpad numpad" "back  numpad numpad" ".     numpad numpad";
+}
+
+#app #q {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: input;
+  font-size: 20px;
+}
+
+#app #q:focus {
+  outline: none;
+}
+
+#app #bases {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: bases;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#app #numpad {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 4;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: numpad;
+  position: absolute;
+  right: 0;
+}
+
+#app #numpad > div {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (50px)[4];
+      grid-template-columns: repeat(4, 50px);
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+#app #numpad button,
+#app #clear,
+#app #back {
+  width: 50px;
+  height: 50px;
+}
+
+#app #clear {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: clear;
+}
+
+#app #back {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  grid-area: back;
+}

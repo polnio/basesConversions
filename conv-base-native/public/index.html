@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Conversion Base</title>
+</head>
+<body>
+    <div id="app">
+        <input type="text" name="q" id="q" readonly>
+        <div id="bases">
+            <div class="base">
+                <label for="binary">Binary</label><!--
+                --><input type="radio" name="base" id="binary" />
+            </div>
+            <div class="base">
+                <label for="decimal">Decimal</label><!--
+                --><input type="radio" checked name="base" id="decimal" />
+            </div>
+            <div class="base">
+                <label for="hexadecimal">Hexadecimal</label><!--
+                --><input type="radio" name="base" id="hexadecimal" />
+            </div>
+        </div>
+        <button id="clear">C</button>
+        <button id="back">&lt;-</button>
+        <div id="numpad">
+            <div>
+                <button>0</button>
+                <button>1</button>
+                <button>2</button>
+                <button>3</button>
+                <button>4</button>
+                <button>5</button>
+                <button>6</button>
+                <button>7</button>
+                <button>8</button>
+                <button>9</button>
+                <button>A</button>
+                <button>B</button>
+                <button>C</button>
+                <button>D</button>
+                <button>E</button>
+                <button>F</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js" type="module"></script>
+</body>
+</html>
